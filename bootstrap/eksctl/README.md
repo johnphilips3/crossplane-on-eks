@@ -117,7 +117,7 @@ helm repo update
 helm install crossplane crossplane-stable/crossplane \
 --namespace crossplane-system \
 --create-namespace \
---version 1.10.2 # Get the latest version from https://github.com/crossplane/crossplane/releases
+--version 1.13.2 # Get the latest version from https://github.com/crossplane/crossplane/releases
 ```
 
 #### (Option 2) Install Crossplane using [Upbound Universal Crossplane (UXP) helm chart](https://github.com/upbound/universal-crossplane/tree/main/cluster/charts/universal-crossplane)
