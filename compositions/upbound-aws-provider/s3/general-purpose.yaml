@@ -10,6 +10,7 @@ metadata:
     awsblueprints.io/environment: dev
     s3.awsblueprints.io/configuration: standard
 spec:
+  writeConnectionSecretsToNamespace: crossplane-system
   compositeTypeRef:
     apiVersion: awsblueprints.io/v1alpha1
     kind: XObjectStorage
@@ -42,6 +43,10 @@ spec:
                 fmt: "bucket-%s"
   resources:
     - name: s3-bucket
+      connectionDetails:
+        - type: FromFieldPath
+          name: s3bucket
+          fromFieldPath: status.atProvider.id
       base:
         apiVersion: s3.aws.upbound.io/v1beta1
         kind: Bucket
