@@ -55,6 +55,8 @@ spec:
           forProvider:
             region: us-west-2
             forceDestroy: true # be careful with this
+            writeConnectionSecretToRef:
+              namespace: crossplane-system
       patches:
         - type: PatchSet
           patchSetName: common-fields
