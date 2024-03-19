@@ -29,10 +29,8 @@ spec:
         kind: XObjectStorage
         metadata:
           name: standard-object-storage
-        spec:
-          forProvider:
-            writeConnectionSecretToRef:
-              namespace: crossplane-system
+      connectionDetails:
+        - fromConnectionSecretKey: s3bucket
       patches:
         - type: PatchSet
           patchSetName: common-fields-composition
