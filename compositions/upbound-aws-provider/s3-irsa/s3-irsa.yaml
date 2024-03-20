@@ -30,7 +30,7 @@ spec:
         metadata:
           name: standard-object-storage
       connectionDetails:
-        - fromConnectionSecretKey: s3bucket
+        - fromConnectionSecretKey: bucketName
       patches:
         - type: PatchSet
           patchSetName: common-fields-composition
